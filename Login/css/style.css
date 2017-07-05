@@ -1,0 +1,43 @@
+#sidebarimg{
+    width:100%;
+}
+.side-nav.fixed {
+    top: 64px;
+}
+.container{
+    width:100%;
+    padding:20px;
+    max-width:inherit;
+}
+.my-carousel{
+    text-align: center;
+}
+
+.cke_dialog input[type='text']{
+    background-color: #fff;
+    outline: 0;
+    width: 100%;
+    height: 30px;
+    padding: 4px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* border: 1px solid; */
+    margin: 0;
+
+}
+
+#preview {
+    max-width: 700px;
+    margin:auto;
+}
+#preview h1{
+    font-size: 36px;
+}
+#preview .couverture img{
+    width: 100%;
+}

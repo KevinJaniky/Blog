@@ -1,0 +1,14 @@
+# On suit les liens symboliques
+Options +FollowSymlinks
+# Activation du mod rewrite d'Apache
+RewriteEngine On
+# Réécriture de index.html vers index.php
+RewriteRule ^Home$ index.php
+RewriteRule ^A-propos-de-moi$ about_me.php
+
+RewriteRule ^Mentions-Legales$ mentions.php
+RewriteRule ^Contact$ contact.php
+
+RewriteRule ^Categorie/([a-zA-Z]+)$ list.php?cat=$1
+RewriteRule ^Categorie/([a-zA-Z]+)/([0-9]+)$ list.php?cat=$1&page=$2
+RewriteRule ^Article/([a-zA-Z0-9]+)/(.+)$ article.php?article=$1 [L]

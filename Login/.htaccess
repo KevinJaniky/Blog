@@ -1,0 +1,30 @@
+# Activation du mod rewrite d'Apache
+RewriteEngine On
+# On suit les liens symboliques
+Options +FollowSymlinks
+
+ErrorDocument 404 /YunaCreation/Login/page_404.php
+
+RewriteRule ^Home$ index.php
+
+RewriteRule ^Dashboard$ dashboard.php
+
+RewriteRule ^Article$ article.php
+RewriteRule ^Preview/([0-9]+)$ preview.php?id=$1
+RewriteRule ^Ajouter$ add_page.php
+
+RewriteRule ^Commentaires$ commentaire.php
+
+RewriteRule ^Reponse$ reponse_table.php
+RewriteRule ^Reponse/([0-9]+)$ reponse.php?id=$1
+
+RewriteRule ^Newsletter$ newsletter.php
+
+RewriteRule ^Boite-A-Idee$ idee.php
+
+RewriteRule ^Report-Bug$ report.php
+RewriteRule ^Bug$ bug.php
+
+
+RewriteRule ^Youtube-Url url-youtube.php [L]
+
