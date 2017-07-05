@@ -84,10 +84,11 @@ class Display
         </ul>
          <ul class=\"collapsible collapsible-accordion\">
           <li>
-            <a class=\"collapsible-header\">Newsletter<i class=\"material-icons\">mail</i></a>
+            <a class=\"collapsible-header\">Boite à outils<i class=\"material-icons\">dashboard</i></a>
             <div class=\"collapsible-body\">
               <ul>
-                <li><a href=\"/Login/Newsletter\">Général</a></li>
+                <li><a href=\"/Login/Newsletter\">Newsletter</a></li>
+                <li><a href=\"/Login/Musique\">Musique Player</a></li>
               </ul>
             </div>
           </li>
@@ -115,7 +116,7 @@ class Display
         </ul>
          <ul class=\"collapsible collapsible-accordion\">
           <li>
-            <a class=\"collapsible-header\">Outils<i class=\"material-icons\">build</i></a>
+            <a class=\"collapsible-header\">Helper<i class=\"material-icons\">build</i></a>
             <div class=\"collapsible-body\">
               <ul>
                 <li><a href=\"/Login/Youtube-Url\">Youtube Url</a></li>

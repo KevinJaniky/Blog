@@ -25,6 +25,7 @@ RewriteRule ^Boite-A-Idee$ idee.php
 RewriteRule ^Report-Bug$ report.php
 RewriteRule ^Bug$ bug.php
 
+RewriteRule ^Musique$ music_player.php
 
 RewriteRule ^Youtube-Url url-youtube.php [L]
 

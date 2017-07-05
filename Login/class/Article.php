@@ -56,7 +56,7 @@ class Article
         $poids = $file['size'];
         $code = $file['error'];
         $maxsize = 10485760;
-        $upload = "../media/Articles/";
+        $upload = "/media/Articles/";
         $new_name = bin2hex(rand(0, 15220));
 
         //On récupère l'extension

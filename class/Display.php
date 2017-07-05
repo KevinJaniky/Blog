@@ -108,32 +108,6 @@ class Display
                     Ce blog est mon petit coin de paradis. Bonne lecture à vous !
                 </p>
             </article>
-            <!--
-            <article>
-                <h3>Youtube</h3>
-                <div class=\"Youtube_remonter\">
-                    <div class=\"item_video\">
-                        <a href=\"#\" target=\"_blank\">
-                            <div><img src=\"http://img.youtube.com/vi/J2X5mJ3HDYE/mqdefault.jpg\"></div>
-                            <p>DEAF KEV - Invincible [NCS Release]</p>
-                        </a>
-                    </div>
-                    <div class=\"item_video\">
-                        <a href=\"#\" target=\"_blank\">
-                            <div>
-                                <img src=\"http://img.youtube.com/vi/FSHgubE3M8c/mqdefault.jpg\"></div>
-                            <p>Twelve24 - The Book (Praisecamp Song 2016) ft. Dawn Elektra</p>
-                        </a>
-                    </div>
-                    <div class=\"item_video\">
-                        <a href=\"#\" target=\"_blank\">
-                            <div><img src=\"http://img.youtube.com/vi/IiPScqHRchY/mqdefault.jpg\"></div>
-                            <p>Twelve24 - Cool Like That (Lyric Video)</p>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            -->
             <article>
                 <div class=\"newsletter\">
                     <form method=\"post\" action='/add_newsletter.php'>
