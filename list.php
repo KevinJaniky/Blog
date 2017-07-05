@@ -25,7 +25,7 @@ $display->header();
 
                 ?>
                 <script>
-                    window.location = '/YunaCreation/Home';
+                    window.location = '/Home';
                 </script>
                 <?php
                 die();
@@ -70,17 +70,17 @@ $display->header();
                     <div class="posted"> Posté
                         le <?= date('M d ,Y', strtotime($article[0]['post_date'])) ?></div>
                     <div class="com"><a
-                                href="/YunaCreation/Article/<?= $article[0]['id'] ?>/<?= $url_title_first ?>#comments"><?= $nb_commentaire ?>
+                                href="/Article/<?= $article[0]['id'] ?>/<?= $url_title_first ?>#comments"><?= $nb_commentaire ?>
                             Commentaire(s)</a></div>
                 </div>
                 <div class="couverture">
-                    <img src="/YunaCreation/media/Articles/<?= $article[0]['couverture'] ?>"
+                    <img src="/media/Articles/<?= $article[0]['couverture'] ?>"
                          alt="<?= $article[0]['keywords'] ?>">
                 </div>
                 <div class="content_art">
                     <?= strip_tags(substr($article[0]['content'], 0, 255)) ?>
                 </div>
-                <a href="/YunaCreation/Article/<?= $article[0]['id'] ?>/<?= $url_title_first ?>">Lire Plus <span
+                <a href="/Article/<?= $article[0]['id'] ?>/<?= $url_title_first ?>">Lire Plus <span
                             class="glyphicon glyphicon-arrow-right"></span> </a>
             </article>
             <div class="categorie_flex">
@@ -93,8 +93,8 @@ $display->header();
                     <article class="article_int" role="article">
                         <div class="article_element">
                             <div class="couverture">
-                                <a href="/YunaCreation/Article/<?= $article[$i]['id'] ?>/<?= $url_title ?>"><img
-                                            src="/YunaCreation/media/Articles/<?= $article[$i]['couverture'] ?>"
+                                <a href="/Article/<?= $article[$i]['id'] ?>/<?= $url_title ?>"><img
+                                            src="/media/Articles/<?= $article[$i]['couverture'] ?>"
                                             alt="<?= $article[$i]['keywords'] ?>"></a>
                             </div>
                             <div class="tag_article"><?= $_CATEGORIE[$article[$i]['categorie']] ?></div>
@@ -125,16 +125,16 @@ $display->header();
                     $next = $page_actuelle + 1;
 
 
-                    echo '<a class="prev" href="/YunaCreation/Categorie/' . $cat . '/' . $prev . '"><i class=" glyphicon glyphicon-chevron-left"></i></a>';
+                    echo '<a class="prev" href="/Categorie/' . $cat . '/' . $prev . '"><i class=" glyphicon glyphicon-chevron-left"></i></a>';
 
                     for ($i = 1; $i <= $nombre_de_page; $i++) {
                         if ($i == $page_actuelle)
                             echo '<span class="active">' . $i . '</span>';
                         else
-                            echo ' <a href="/YunaCreation/Categorie/' . $cat . '/' . $i . '">' . $i . '</a> ';
+                            echo ' <a href="/Categorie/' . $cat . '/' . $i . '">' . $i . '</a> ';
                     }
 
-                    echo '<a class="next" href="/YunaCreation/Categorie/' . $cat . '/' . $next . '"><i class="glyphicon glyphicon-chevron-right"></i></a>';
+                    echo '<a class="next" href="/Categorie/' . $cat . '/' . $next . '"><i class="glyphicon glyphicon-chevron-right"></i></a>';
                 }
                 }
                 ?>

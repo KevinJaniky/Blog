@@ -15,15 +15,15 @@ class Display
     <meta property=\"og:description\" content=\"Description\"/>
     <meta property=\"og:image\" content=\"URL_image\"/>
     <meta property=\"og:url\" content=\"\">
-    <link rel='icon' href='/bonbon/media/favicon.png'>
-    <link rel=\"stylesheet\" href=\"/bonbon/css/bootstrap.min.css\">
-    <link rel=\"stylesheet\" href=\"/bonbon/owl-carousel/assets/owl.carousel.min.css\">
-    <link rel=\"stylesheet\" href=\"/bonbon/css/style.css\">
+    <link rel='icon' href='/media/favicon.png'>
+    <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\">
+    <link rel=\"stylesheet\" href=\"/owl-carousel/assets/owl.carousel.min.css\">
+    <link rel=\"stylesheet\" href=\"/css/style.css\">
 
-    <script src=\"/bonbon/js/jquery.js\"></script>
-    <script src=\"/bonbon/js/bootstrap.min.js\"></script>
-    <script src=\"/bonbon/owl-carousel/owl.carousel.min.js\"></script>
-    <script src=\"/bonbon/js/script.js\"></script>
+    <script src=\"/js/jquery.js\"></script>
+    <script src=\"/js/bootstrap.min.js\"></script>
+    <script src=\"/owl-carousel/owl.carousel.min.js\"></script>
+    <script src=\"/js/script.js\"></script>
 </head>";
     }
 
@@ -46,16 +46,16 @@ class Display
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
                     <ul class=\"nav navbar-nav\">
-                        <li><a href=\"/bonbon/Home\"><span class=\"glyphicon glyphicon-home\"></span></a></li>
-                        <li><a href=\"/bonbon/Contact\" rel='nofollow'>Contact</a></li>
-                        <li><a href=\"/bonbon/A-propos-de-moi\">A propos de moi</a></li>
+                        <li><a href=\"/Home\"><span class=\"glyphicon glyphicon-home\"></span></a></li>
+                        <li><a href=\"/Contact\" rel='nofollow'>Contact</a></li>
+                        <li><a href=\"/A-propos-de-moi\">A propos de moi</a></li>
                     </ul>
                     <ul class=\"nav navbar-nav navbar-right\">
                        <li><a href=\"#\" >
-                <img class='logo-reseaux-sociaux' src='/bonbon/media/Social_network/Facebook.png'  alt='facebook logo'></a></li>
-                        <li><a href=\"#\"><img class='logo-reseaux-sociaux' src='/bonbon/media/Social_network/Twitter.png' alt='twitter logo' ></a></li>
-                        <li><a href=\"#\"><img class='logo-reseaux-sociaux' src='/bonbon/media/Social_network/Instagram.png' alt='instagram logo' ></a></li>
-                        <li><a href=\"#\"><img class='logo-reseaux-sociaux' src='/bonbon/media/Social_network/Youtube.png' alt='youtube logo' ></a></li>
+                <img class='logo-reseaux-sociaux' src='/media/Social_network/Facebook.png'  alt='facebook logo'></a></li>
+                        <li><a href=\"#\"><img class='logo-reseaux-sociaux' src='/media/Social_network/Twitter.png' alt='twitter logo' ></a></li>
+                        <li><a href=\"#\"><img class='logo-reseaux-sociaux' src='/media/Social_network/Instagram.png' alt='instagram logo' ></a></li>
+                        <li><a href=\"#\"><img class='logo-reseaux-sociaux' src='/media/Social_network/Youtube.png' alt='youtube logo' ></a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -66,7 +66,7 @@ class Display
     {
         echo "<header>
     <h1 class=\"text-center\" role='banner'>
-        <img src='/bonbon/media/logo.png'>
+        <img src='/media/logo.png'>
     </h1>
     <nav class=\"navbar navbar-default \" role='navigation'>
         <div class=\"container-fluid\">
@@ -84,11 +84,11 @@ class Display
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-2\">
                 <ul class=\"nav navbar-nav\">
-                    <li><a href=\"/bonbon/Categorie/Musique\"><img src='/bonbon/media/Icone/music_black.png' class='icone_image' alt='musique icon'>Musique</a></li>
-                    <li><a href=\"/bonbon/Categorie/Web\"><img src='/bonbon/media/Icone/web_black.png' class='icone_image' alt='musique icon'>Web</a></li>
-                    <li><a href=\"/bonbon/Categorie/Lifestyle\"><img src='/bonbon/media/Icone/lifestyle_black.png' class='icone_image' alt='musique icon'>Lifestyle</a></li>
-                    <li><a href=\"/bonbon/Categorie/Culture\"><img src='/bonbon/media/Icone/Culture_black.png' class='icone_image' alt='musique icon'>Culture</a></li>
-                    <li><a href=\"/bonbon/Categorie/Humeur\"><img src='/bonbon/media/Icone/humeur_black.png' class='icone_image' alt='musique icon'>Humeur</a></li>
+                    <li><a href=\"/Categorie/Musique\"><img src='/media/Icone/music_black.png' class='icone_image' alt='musique icon'>Musique</a></li>
+                    <li><a href=\"/Categorie/Web\"><img src='/media/Icone/web_black.png' class='icone_image' alt='musique icon'>Web</a></li>
+                    <li><a href=\"/Categorie/Lifestyle\"><img src='/media/Icone/lifestyle_black.png' class='icone_image' alt='musique icon'>Lifestyle</a></li>
+                    <li><a href=\"/Categorie/Culture\"><img src='/media/Icone/Culture_black.png' class='icone_image' alt='musique icon'>Culture</a></li>
+                    <li><a href=\"/Categorie/Humeur\"><img src='/media/Icone/humeur_black.png' class='icone_image' alt='musique icon'>Humeur</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -102,7 +102,7 @@ class Display
         <aside role='presentation'>
             <article>
                 <h3>A propos de moi</h3>
-                <img src=\"/bonbon/media/presentation.jpg\" alt=\"Photo Yuna Creation\">
+                <img src=\"/media/presentation.jpg\" alt=\"Photo Yuna Creation\">
                 <p>
                    
                     Hello ! bienvenue sur Yuna Création ! Je m’appelle Audrey, je suis actuellement étudiante en communication. 
@@ -137,7 +137,7 @@ class Display
             -->
             <article>
                 <div class=\"newsletter\">
-                    <form method=\"post\" action='/bonbon/add_newsletter.php'>
+                    <form method=\"post\" action='/add_newsletter.php'>
                         <div class=\"form-group\">
                             <label for=\"mail\"><h3>Newsletter</h3></label>
                             <input type=\"email\" class=\"form-control\" name=\"newsletter\" id=\"mail\"
@@ -151,7 +151,7 @@ class Display
             <article>
                 <a href='#'>
                 <div class=\"youtube_visuel\">
-                   <img src='/bonbon/media/visuel_youtube.png'>
+                   <img src='/media/visuel_youtube.png'>
                 </div>
                 </a>
             </article>
@@ -375,16 +375,16 @@ class Display
         <div class=\"link_info_site\">
             <div>© 2017 copyright.</div>
             <div>
-                <a href=\"/bonbon/Mentions-Legales\">Mentions Légales</a>
+                <a href=\"/Mentions-Legales\">Mentions Légales</a>
             </div>
         </div>
         <div class=\"link_social_site\">
             <ul>
                 <li><a href=\"#\" >
-                <img class='logo-reseaux-sociaux' src='/bonbon/media/Social_network/Facebook.png'  alt='facebook logo'></a></li>
-                        <li><a href=\"#\"><img class='logo-reseaux-sociaux' src='/bonbon/media/Social_network/Twitter.png' alt='twitter logo' ></a></li>
-                        <li><a href=\"#\"><img class='logo-reseaux-sociaux' src='/bonbon/media/Social_network/Instagram.png' alt='instagram logo' ></a></li>
-                        <li><a href=\"#\"><img class='logo-reseaux-sociaux' src='/bonbon/media/Social_network/Youtube.png' alt='youtube logo' ></a></li>
+                <img class='logo-reseaux-sociaux' src='/media/Social_network/Facebook.png'  alt='facebook logo'></a></li>
+                        <li><a href=\"#\"><img class='logo-reseaux-sociaux' src='/media/Social_network/Twitter.png' alt='twitter logo' ></a></li>
+                        <li><a href=\"#\"><img class='logo-reseaux-sociaux' src='/media/Social_network/Instagram.png' alt='instagram logo' ></a></li>
+                        <li><a href=\"#\"><img class='logo-reseaux-sociaux' src='/media/Social_network/Youtube.png' alt='youtube logo' ></a></li>
             </ul>
         </div>
 
@@ -429,7 +429,7 @@ class Display
     </div>
 
     <audio crossorigin>
-        <source src="/bonbon/media/Music/music.mp3" type="audio/mp3">
+        <source src="/media/Music/music.mp3" type="audio/mp3">
     </audio>
 </div>';
     }

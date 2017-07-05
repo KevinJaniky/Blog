@@ -22,7 +22,7 @@ $_CONFIG = array(
 // GENERAL SETTINGS
 
     'disabled' => false,
-    'uploadURL' => "/YunaCreation/kcfinder_image_upload",
+    'uploadURL' => "/kcfinder_image_upload",
     'uploadDir' => "",
     'theme' => "default",
 

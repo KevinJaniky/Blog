@@ -33,7 +33,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                 echo '<td>' . $tab[$i]['id'] . '</td>';
                 echo '<td>' . strip_tags(substr($tab[$i]['content'], 0, 100)) . '...</td>';
                 echo '<td>' . $tab[$i]['pseudo'] . '</td>';
-                echo '<td><a href="/YunaCreation/Login/Reponse/'.$tab[$i]['id'].'"><i class="material-icons blue-text text-darken-4">question_answer</i></a></td>';
+                echo '<td><a href="/Login/Reponse/'.$tab[$i]['id'].'"><i class="material-icons blue-text text-darken-4">question_answer</i></a></td>';
                 echo '<td><a href="#" data-id="' . $tab[$i]['id'] . '" class="delete"><i class="material-icons red-text text-darken-2">delete</i></a></td>';
                 echo '</tr>';
 

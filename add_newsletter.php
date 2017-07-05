@@ -9,9 +9,9 @@ if(isset($_POST['newsletter']) && isset($_POST['url'])) {
     if($abonne->verifExist()){
         $abonne->addEmail();
     }else {
-        header('location:/YunaCreation/Home');
+        header('location:/Home');
     }
 }else {
-    header('location:/YunaCreation/Home');
+    header('location:/Home');
     die();
 }

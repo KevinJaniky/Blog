@@ -54,7 +54,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true  ){
             <form class="login-form" method="post">
                 <div class="row">
                     <div class="input-field col s12 center">
-                        <img src="/bonbon/media/logo.png" style="width: 200px;" alt="" class="circle responsive-img valign profile-image-login">
+                        <img src="/media/logo.png" style="width: 200px;" alt="" class="circle responsive-img valign profile-image-login">
                         <p class="center login-form-text">Backoffice</p>
                     </div>
                 </div>

@@ -117,7 +117,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                                     $data->update($id);
                                     ?>
                                     <script>
-                                        window.location = '/bonbon/Login/Article';
+                                        window.location = '/Login/Article';
                                     </script>
                                     <?php
                                     die();

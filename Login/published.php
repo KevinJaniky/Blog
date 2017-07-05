@@ -7,7 +7,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
         $id = $_GET['id'];
         $data = new Article();
         $data->published($id);
-        header('location:/bonbon/Login/Article');
+        header('location:/Login/Article');
         die();
     }
 }

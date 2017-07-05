@@ -3,7 +3,7 @@ RewriteEngine On
 # On suit les liens symboliques
 Options +FollowSymlinks
 
-ErrorDocument 404 /YunaCreation/Login/page_404.php
+ErrorDocument 404 /Login/page_404.php
 
 RewriteRule ^Home$ index.php
 

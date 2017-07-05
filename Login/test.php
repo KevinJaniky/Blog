@@ -40,6 +40,6 @@
     </div>
 
     <audio crossorigin>
-        <source src="/yunacreation/media/Music/music.mp3" type="audio/mp3">
+        <source src="/media/Music/music.mp3" type="audio/mp3">
     </audio>
 </div>

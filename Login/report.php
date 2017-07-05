@@ -43,7 +43,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
 
                                 ?>
                                 <script>
-                                    window.location = '/YunaCreation/Login/Report-Bug';
+                                    window.location = '/Login/Report-Bug';
                                 </script>
                                 <?php
                             }

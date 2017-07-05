@@ -4,7 +4,7 @@ $display = new Display();
 if (isset($_GET['article'])) {
     $art = htmlentities($_GET['article']);
     if (!is_numeric($art)) {
-        header('location:/YunaCreation/Home');
+        header('location:/Home');
         die();
     }
     $data = new Article();
@@ -37,7 +37,7 @@ $url = str_replace(' ', '-', $article['titre']);
                     <div class="com"><a href="#comments"><?= $nb_commentaire ?> Commentaire(s)</a></a></div>
                 </div>
                 <div class="couverture">
-                    <img src="/YunaCreation/media/Articles/<?= $article['couverture'] ?>"
+                    <img src="/media/Articles/<?= $article['couverture'] ?>"
                          alt="<?= $article['keywords'] ?>">
                 </div>
                 <div class="content_art">
@@ -112,7 +112,7 @@ $url = str_replace(' ', '-', $article['titre']);
                         $come->addCommentaire();
                         ?>
                         <script>
-                            window.location = '/YunaCreation/Article/<?= $article['id'] ?>/<?= $url ?>'
+                            window.location = '/Article/<?= $article['id'] ?>/<?= $url ?>'
                         </script>
                         <?php
                     }

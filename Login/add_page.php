@@ -29,7 +29,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                                     <div class="file-field input-field">
                                         <div class="btn cyan lighten-1">
                                             <span>File</span>
-                                            <input type="file" name="couverture" required>
+                                            <input type="file" name="couverture">
                                         </div>
                                         <div class="file-path-wrapper">
                                             <input class="file-path validate" type="text">
@@ -38,7 +38,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <select class="initialized" name="categorie" required>
+                                        <select class="initialized" name="categorie">
                                             <option value="" disabled="" selected="">Choose your option</option>
                                             <?php
                                             for ($i = 0; $i < 5; $i++){
@@ -51,7 +51,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input id="key" type="text" name="keywords" required>
+                                        <input id="key" type="text" name="keywords" >
                                         <label for="key">Keywords</label>
                                     </div>
                                 </div>
@@ -74,15 +74,20 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                                               class="ckeditor"></textarea>
                                 </div>
                                 <div class="input-field col s12">
+                                    <button class="btn cyan waves-effect waves-light left" type="submit"
+                                            name="action" value="save">Save
+                                        <i class="material-icons">save</i>
+                                    </button>
+                                    &nbsp;
                                     <button class="btn cyan waves-effect waves-light right" type="submit"
-                                            name="action">Submit
+                                            name="action" value="submit">Submit
                                         <i class="material-icons">send</i>
                                     </button>
                                 </div>
                             </form>
 
                             <?php
-                            if (isset($_POST['titre']) && isset($_POST['content']) && isset($_POST['categorie']) && isset($_POST['keywords']) && isset($_FILES['couverture'])) {
+                            if (isset($_POST['titre']) && isset($_POST['content']) && isset($_POST['categorie']) && isset($_POST['keywords']) && isset($_FILES['couverture']) && isset($_POST['action']) && $_POST['action'] == "submit") {
                                 $titre = $_POST['titre'];
                                 $content = $_POST['content'];
                                 $categorie = $_POST['categorie'];
@@ -100,12 +105,54 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                                 $data->setCarousel($carousel);
                                 $data->setKeywords($keyword);
                                 $data->setCouverture($image);
-                                $data->addArticle();
+                                $data->addArticle()  ;
+
                                 ?>
                                 <script>
-                                    window.location = '/YunaCreation/Login/Article';
+                                   window.location = '/Login/Article';
                                 </script>
                                 <?php
+                            }else if(isset($_POST['action']) && $_POST['action'] == 'save'){
+                                $save = new Article();
+                                $donnee = 0;
+                                if(isset($_POST['titre'])) {
+                                    $save->setTitre($_POST['titre']);
+                                    $donnee = 1;
+                                }else {
+                                    $save->setTitre('None');
+                                }
+                                if(!empty($_POST['content'])) {
+                                    $save->setContent($_POST['content']);
+                                    $donnee = 1;
+                                }else {
+                                    $save->setContent('Lorem ipsum dolor sit amet.');
+                                }
+                                if(isset($_POST['categorie'])) {
+                                    $save->setCategorie($_POST['categorie']);
+                                    $donnee = 1;
+                                }else {
+                                    $save->setCategorie(0);
+                                }
+                                if(!empty($_POST['carousel'])) {
+                                    $donnee = 1;
+                                    $save->setCarousel(1);
+                                }else {
+                                    $save->setCarousel(0);
+                                }
+                                if(!empty($_POST['keywords'])) {
+                                    $donnee = 1;
+                                    $save->setKeywords($_POST['keywords']);
+                                }else {
+                                    $save->setKeywords('None');
+                                }
+                                if($donnee==1){
+                                    $save->save();
+                                ?>
+                                <script>
+                                   window.location = '/Login/Article';
+                                </script>
+                                <?php
+                                }
                             }
                             ?>
                         </div>

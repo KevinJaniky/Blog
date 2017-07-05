@@ -28,7 +28,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                                         le <?= date('M d ,Y', strtotime($article['post_date'])) ?></div>
                                 </div>
                                 <div class="couverture">
-                                    <img src="/bonbon/media/Articles/<?= $article['couverture'] ?>"
+                                    <img src="/media/Articles/<?= $article['couverture'] ?>"
                                          alt="<?= $article['keywords'] ?>">
                                 </div>
                                 <div class="content_art">
@@ -36,7 +36,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                                 </div>
                             </article>
                             <a class="btn cyan waves-effect waves-light right" type="submit"
-                                    href="/bonbon/Login/published.php?id=<?= $article['id'] ?>">Publier
+                                    href="/Login/published.php?id=<?= $article['id'] ?>">Publier
                                 <i class="material-icons">publish</i>
                             </a>
                             <p>&nbsp</p>

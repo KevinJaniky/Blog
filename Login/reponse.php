@@ -14,8 +14,8 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
 
     ?>
     <body class="blue-grey lighten-5">
-    <script src="/YunaCreation/ckeditor/ckeditor.js"></script>
-    <script src="/YunaCreation/Login/sweetAlert/sweetalert.min.js"></script>
+    <script src="/ckeditor/ckeditor.js"></script>
+    <script src="/Login/sweetAlert/sweetalert.min.js"></script>
     <div id="basic-form" class="section">
         <div class="row">
             <div class="col s12 m12 l10 offset-l1">
@@ -49,7 +49,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
 
                             ?>
                         <script>
-                            window.location = '/YunaCreation/Login/Reponse';
+                            window.location = '/Login/Reponse';
                         </script>
                         <?php
                             die();

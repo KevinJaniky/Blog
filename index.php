@@ -29,7 +29,7 @@ $display->header();
                     <div class="article_carousel_content">
                         <div class="tag_carousel"><?= $_CATEGORIE[$data_carousel[$i]['categorie']] ?></div>
                         <div class="titre_carousel"><?= $data_carousel[$i]['titre'] ?></div>
-                        <div class="link_carousel"><a href="/YunaCreation/Article/<?= $data_carousel[$i]['id'] ?>/<?= $url ?>">Lire plus</a></div>
+                        <div class="link_carousel"><a href="/Article/<?= $data_carousel[$i]['id'] ?>/<?= $url ?>">Lire plus</a></div>
                     </div>
                 </div>
 
@@ -60,9 +60,9 @@ $display->header();
         </script>
     </section>
     <section class="tag_mise_en_avant">
-        <a href="/YunaCreation/Categorie/Musique"><span>Musique</span></a>
-        <a href="/YunaCreation/Categorie/Web"><span>Web</span></a>
-        <a href="/YunaCreation/Categorie/Culture"><span>Culture</span></a>
+        <a href="/Categorie/Musique"><span>Musique</span></a>
+        <a href="/Categorie/Web"><span>Web</span></a>
+        <a href="/Categorie/Culture"><span>Culture</span></a>
     </section>
     <div class="content_col_2">
         <?php
@@ -84,16 +84,16 @@ $display->header();
                 <div class="info">
                     <div class="posted"> Posté le <?= date('M d ,Y', strtotime($liste[0]['post_date'])) ?></div>
                     <div class="com"><a
-                                href="/YunaCreation/Article/<?= $liste[0]['id'] ?>/<?= $url ?>#comments"><?= $nb_commentaire ?>
+                                href="/Article/<?= $liste[0]['id'] ?>/<?= $url ?>#comments"><?= $nb_commentaire ?>
                             Commentaire(s)</a></div>
                 </div>
                 <div class="couverture">
-                    <img src="/YunaCreation/media/Articles/<?= $liste[0]['couverture'] ?>" alt="<?= $liste[0]['keywords'] ?>">
+                    <img src="/media/Articles/<?= $liste[0]['couverture'] ?>" alt="<?= $liste[0]['keywords'] ?>">
                 </div>
                 <div class="content_art">
                     <?= strip_tags(substr($liste[0]['content'], 0, 255)) ?>
                 </div>
-                <a href="/YunaCreation/Article/<?= $liste[0]['id'] ?>/<?= $url ?>">Lire Plus <span class="glyphicon glyphicon-arrow-right"></span> </a>
+                <a href="/Article/<?= $liste[0]['id'] ?>/<?= $url ?>">Lire Plus <span class="glyphicon glyphicon-arrow-right"></span> </a>
             </article>
 
             <?php
@@ -102,13 +102,13 @@ $display->header();
                 ?>
                 <article class="article_list" role="article">
                     <div class="couverture">
-                        <a href="/YunaCreation/Article/<?= $liste[$i]['id'] ?>/<?= $url ?>"><img
-                                    src="/YunaCreation/media/Articles/<?= $liste[$i]['couverture'] ?>"
+                        <a href="/Article/<?= $liste[$i]['id'] ?>/<?= $url ?>"><img
+                                    src="/media/Articles/<?= $liste[$i]['couverture'] ?>"
                                     alt="<?= $liste[$i]['keywords'] ?>"></a>
                     </div>
                     <div class="content_art_list">
                         <div class="tag_article"><?= $_CATEGORIE[$liste[$i]['categorie']] ?></div>
-                        <h1><a href="/YunaCreation/Article/<?= $liste[$i]['id'] ?>/<?= $url ?>"><?= $liste[$i]['titre'] ?></a>
+                        <h1><a href="/Article/<?= $liste[$i]['id'] ?>/<?= $url ?>"><?= $liste[$i]['titre'] ?></a>
                         </h1>
                         <div class="info">
                             <div class="posted"><?= date('M d ,Y', strtotime($liste[$i]['post_date'])) ?></div>

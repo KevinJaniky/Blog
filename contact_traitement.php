@@ -229,7 +229,7 @@ if (
                                                                             <div class="contentEditableContainer contentTextEditable">
                                                                                 <div class="contentEditable">
                                                                                     <p style=\'text-align:center;margin:auto;font-family:Georgia,Time,sans-serif;font-size:26px;color:#1A54BA;\'>
-                                                                                        <img src="http://www.yuna-creation.fr/bonbon/media/logo.png" width=\'251\'
+                                                                                        <img src="http://www.yuna-creation.fr/media/logo.png" width=\'251\'
                                                                                              height=\'143\' alt=\'\'
                                                                                              data-default="placeholder"
                                                                                              data-max-width="560"
@@ -299,7 +299,7 @@ if (
                                                                             <div class="contentEditableContainer contentTextEditable">
                                                                                 <div class="contentEditable"
                                                                                      align=\'center\'>
-                                                                                    <a target=\'_blank\' href=\'http://www.yuna-creation.fr/bonbon/\'
+                                                                                    <a target=\'_blank\' href=\'http://www.yuna-creation.fr/\'
                                                                                        class=\'link2\'
                                                                                        style=\'color:#ffffff;\'>Accèder au Blog</a>
                                                                                 </div>
@@ -390,6 +390,6 @@ if (
     $headers .= "Content-Type: text/html; charset=\"iso-8859-1\"";
 
     var_dump(mail($mail,$obj,$message,$headers));
-    header('location:/bonbon/Contact');
+    header('location:/Contact');
     die();
 }

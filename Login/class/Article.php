@@ -189,4 +189,15 @@ class Article
         $query = $this->_bdd->prepare('UPDATE articles SET publication = 1 WHERE id = :id');
         $query->execute(['id'=>$id]);
     }
+
+    public function save() {
+        $query = $this->_bdd->prepare('INSERT INTO articles(titre,content,categorie,keywords,carousel) VALUES (:titre,:content,:cat,:keywords,:carousel)');
+        $query->execute([
+            'titre'=>$this->_titre,
+            'content'=>$this->_content,
+            'cat'=>$this->_categorie,
+            'keywords'=>$this->_keywords,
+            'carousel'=>$this->_carousel
+        ]);
+    }
 }

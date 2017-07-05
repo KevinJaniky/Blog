@@ -29,7 +29,7 @@ $display->header();
     <section class="row">
         <article class="contact col-md-offset-3 col-md-6">
             <h1>Me contacter</h1>
-            <form method="post" action="/bonbon/contact_traitement.php" role="form">
+            <form method="post" action="/contact_traitement.php" role="form">
                 <div class="form-group">
                     <label for="nom">Nom</label>
                     <input type="text" class="form-control" name="nom" id="nom" required placeholder="Votre nom">
@@ -72,7 +72,7 @@ $display->header();
         <article class="boite_a_idee col-md-offset-3 col-md-6" id="idee">
             <h1>Boite a idée</h1>
             <h5 class="text-muted">N'hésitez pas à proposer vos idées</h5>
-            <form method="post" action="/bonbon/idee_traitement.php">
+            <form method="post" action="/idee_traitement.php">
                 <div class="form-group">
                     <label for="nom">Nom</label>
                     <input type="text" class="form-control" name="nom" id="nom" required placeholder="Votre nom">
