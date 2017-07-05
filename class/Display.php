@@ -30,7 +30,7 @@ class Display
     public function navTop()
     {
         echo "
-        <nav class=\"navbar navbar-default navbar-static-top top_nav\" role='navigation'>
+        <nav class=\"navbar navbar-default navbar-static-top top_nav\">
             <div class=\"container-fluid\">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class=\"navbar-header\">
@@ -64,11 +64,10 @@ class Display
 
     public function header()
     {
-        echo "<header>
-    <h1 class=\"text-center\" role='banner'>
-        <img src='/media/logo.png'>
+        echo "<header><h1 class=\"text-center\" >
+        <img src='/media/logo.png' alt='Logo element'>
     </h1>
-    <nav class=\"navbar navbar-default \" role='navigation'>
+    <nav class=\"navbar navbar-default \">
         <div class=\"container-fluid\">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class=\"navbar-header\">
@@ -139,7 +138,7 @@ class Display
                 <div class=\"newsletter\">
                     <form method=\"post\" action='/add_newsletter.php'>
                         <div class=\"form-group\">
-                            <label for=\"mail\"><h3>Newsletter</h3></label>
+                            <h3><label for=\"mail\">Newsletter</label></h3>
                             <input type=\"email\" class=\"form-control\" name=\"newsletter\" id=\"mail\"
                                    placeholder=\"Adresse mail\">
                         </div>
@@ -151,7 +150,7 @@ class Display
             <article>
                 <a href='#'>
                 <div class=\"youtube_visuel\">
-                   <img src='/media/visuel_youtube.png'>
+                   <img src='/media/visuel_youtube.png' alt='visuel acces youtube'>
                 </div>
                 </a>
             </article>

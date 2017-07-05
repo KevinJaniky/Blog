@@ -15,6 +15,7 @@ $display->header();
 
 <div class="wrapper"  role="main">
     <section class="carousel_home ">
+        <h1 style="display: none;">Main Content</h1>
         <div class="owl-carousel owl-theme">
             <?php
             $carousel = new Article();
@@ -60,6 +61,7 @@ $display->header();
         </script>
     </section>
     <section class="tag_mise_en_avant">
+        <h1 style="display: none;">Mise en avant des tags</h1>
         <a href="/Categorie/Musique"><span>Musique</span></a>
         <a href="/Categorie/Web"><span>Web</span></a>
         <a href="/Categorie/Culture"><span>Culture</span></a>
@@ -78,7 +80,7 @@ $display->header();
         $url = str_replace(' ', '-', $liste[0]['titre']);
         ?>
 
-            <article class="article_promo" role="article">
+            <section class="article_promo">
                 <div class="tag_article"><?= $_CATEGORIE[$liste[0]['categorie']] ?></div>
                 <h1><?= $liste[0]['titre'] ?></h1>
                 <div class="info">
@@ -94,13 +96,13 @@ $display->header();
                     <?= strip_tags(substr($liste[0]['content'], 0, 255)) ?>
                 </div>
                 <a href="/Article/<?= $liste[0]['id'] ?>/<?= $url ?>">Lire Plus <span class="glyphicon glyphicon-arrow-right"></span> </a>
-            </article>
+            </section>
 
             <?php
             for ($i = 1; $i < $count; $i++) {
                 $url = str_replace(' ', '-', $liste[$i]['titre']);
                 ?>
-                <article class="article_list" role="article">
+                <section class="article_list">
                     <div class="couverture">
                         <a href="/Article/<?= $liste[$i]['id'] ?>/<?= $url ?>"><img
                                     src="/media/Articles/<?= $liste[$i]['couverture'] ?>"
@@ -117,7 +119,7 @@ $display->header();
                             <?= strip_tags(substr($liste[$i]['content'], 0, 255)) ?>
                         </div>
                     </div>
-                </article>
+                </section>
                 <?php
             }
             }
