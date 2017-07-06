@@ -10,45 +10,52 @@ class Manage
         require_once 'conf.php';
         try {
 
-            $this->_bdd = new PDO("mysql:host=".HOST.";dbname=".DBNAME, USER, MDP);
+            $this->_bdd = new PDO("mysql:host=" . HOST . ";dbname=" . DBNAME, USER, MDP);
             return $this->_bdd;
         } catch (Exception $e) {
             die("erreur :" . $e->getMessage());
         }
     }
 
-    public function countCommentaireTotal(){
+    public function countCommentaireTotal()
+    {
         $query = $this->_bdd->query('SELECT COUNT(*) as nb FROM commentaire');
         $data = $query->fetch();
         return $data['nb'];
     }
-    public function countNewsTotal(){
+
+    public function countNewsTotal()
+    {
         $query = $this->_bdd->query('SELECT COUNT(*) as nb FROM newsletter');
         $data = $query->fetch();
         return $data['nb'];
     }
-    public function countIdeeTotal(){
+
+    public function countIdeeTotal()
+    {
         $query = $this->_bdd->query('SELECT COUNT(*) as nb FROM box_idee');
         $data = $query->fetch();
         return $data['nb'];
     }
 
-    public function createUrlYoutube($chaine){
+    public function createUrlYoutube($chaine)
+    {
         $regex = '#^(https:\/\/)(www\.youtube\.com\/watch\?v=)([a-zA-Z0-9_-]+)$#';
-        $data = preg_match($regex,$chaine);
+        $data = preg_match($regex, $chaine);
 
-        if($data){
-            $data_explode = explode('v=',$chaine);
+        if ($data) {
+            $data_explode = explode('v=', $chaine);
             $tab = $data_explode[1];
-            return 'https://www.youtube.com/embed/'.$tab;
+            return 'https://www.youtube.com/embed/' . $tab;
         } else {
             echo 'Url error';
             return false;
         }
     }
 
-    public function musicPlayerUpdate($file){
-        $extensions_valides = ['mp3'];
+    public function musicPlayerUpdate($file)
+    {
+        $extensions_valides = ['mp3', 'mp4'];
 
         $name = $file["name"];
         $poids = $file['size'];
@@ -59,7 +66,6 @@ class Manage
         //On récupère l'extension
         $name_exploded = explode(".", $name);
         $extension = strtolower(end($name_exploded));
-        $new_name = $new_name . "." . $extension;
 
         if ($code > 0) {
             switch ($code) {
@@ -95,11 +101,16 @@ class Manage
         } //Notre extension est donc ok, on vérifie maintenant le poids de l'image
         else if ($poids > $maxsize) {
             return "Fichier trop lourd (" . $poids . "/" . $maxsize . "octets)";
-        }
-        $resultat = move_uploaded_file($file['tmp_name'], $upload . 'music.mp3');
-        if (!$resultat) {
+        } else {
+            $dest = $upload . 'music.mp3';
+            var_dump($dest);
 
-            return $this->_error = true;
+
+            $resultat = move_uploaded_file($name, $dest);
+            if (!$resultat) {
+                return 'nope';
+            }
+            return 'ok';
         }
     }
 }

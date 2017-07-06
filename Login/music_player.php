@@ -39,7 +39,10 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                                 </form>
                                 <?php
                                 if(isset($_FILES['music'])) {
-
+                                    $data = new Manage();
+                                    var_dump($data->musicPlayerUpdate($_FILES['music']));
+                                } else {
+                                    echo 'ici';
                                 }
                                 ?>
                             </div>
