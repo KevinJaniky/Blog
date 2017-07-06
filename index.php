@@ -8,6 +8,7 @@ $display = new Display();
 $display->head('Home');
 ?>
 <body>
+<?php include_once("analyticstracking.php") ?>
 <?php
 $display->navTop();
 $display->header();

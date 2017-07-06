@@ -17,6 +17,7 @@ if (isset($_GET['article'])) {
 $display->head($article['titre']);
 ?>
 <body>
+<?php include_once("analyticstracking.php") ?>
 <?php
 $display->navTop();
 $display->header();

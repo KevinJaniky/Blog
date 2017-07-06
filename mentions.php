@@ -7,6 +7,7 @@ $display->header();
 ?>
 
 <body>
+<?php include_once("analyticstracking.php") ?>
     <section class="col-md-8 col-md-offset-2">
         <h1>MENTIONS LEGALES :</h1>
 
