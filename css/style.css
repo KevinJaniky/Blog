@@ -757,3 +757,14 @@ aside h3 {
 .like {
     border:none !important;
 }
+.idea {
+    text-align: center;
+    margin: 20px 0;
+    border: 1px solid #d6d6d6;
+    padding: 20px;
+}
+.idea a {
+    border-radius: 0;
+    height: 40px;
+    width: 100%;
+}

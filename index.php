@@ -129,6 +129,10 @@ $display->header();
             }
             }
             ?>
+            <div class="idea">
+                <h3>N'hésiter pas a partager vos idées</h3>
+                <a href="/Contact#idee" class="btn btn-primary">Exprimez vous</a>
+            </div>
         </section>
         <?php
         $display->aside();
