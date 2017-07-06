@@ -123,4 +123,15 @@ class Manage
         $query = $this->_bdd->query('SELECT * FROM yv_like WHERE id_article = '.$id);
         return $query->fetch();
     }
+
+    public function addToDoList($tache) {
+         $this->_bdd->query('INSERT INTO data(cle,valeur) VALUES ("todo","'.$tache.'")');
+    }
+    public function readToDoList() {
+        $query = $this->_bdd->query('SELECT * FROM data WHERE cle ="todo"');
+        return $query->fetchAll();
+    }
+    public function deleteToDo($id) {
+        $this->_bdd->query('DELETE FROM data WHERE id='.$id);
+    }
 }

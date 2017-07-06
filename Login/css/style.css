@@ -41,3 +41,22 @@
 #preview .couverture img{
     width: 100%;
 }
+
+#task-card{
+    max-height:410px;
+    overflow: auto;
+}
+
+#first_name {
+    background: white;
+    border: inherit;
+    padding:0 10px;
+}
+#todo_title {
+    position: relative;
+}
+#todo_title button{
+    position: absolute;
+    top:20px;
+    right:20px;
+}
