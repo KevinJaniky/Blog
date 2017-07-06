@@ -754,3 +754,6 @@ aside h3 {
 .article_promo {
     cursor: pointer;
 }
+.like {
+    border:none !important;
+}

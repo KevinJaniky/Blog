@@ -28,8 +28,9 @@ $url = str_replace(' ', '-', $article['titre']);
 <div class="wrapper">
     <div class="content_col_2">
         <section class="list_article">
-            <article class="article_preview ">
+            <article class="article_preview" id="preview" data-id="<?= $article['id'] ?>">
                 <div class="tag_article"><?= $_CATEGORIE[$article['categorie']] ?></div>
+                <a href="/like.php?id=<?= $article['id'] ?>&title=<?= $url ?>" ><div class="like tag_article glyphicon glyphicon-heart" id="like_hearth"></div></a>
                 <h1><?= $article['titre'] ?></h1>
                 <div class="info">
                     <div class="posted"> Posté
@@ -124,7 +125,26 @@ $url = str_replace(' ', '-', $article['titre']);
         ?>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url : '/recupCookie.php',
+            type : 'GET',
+            data : 'id='+<?= $article['id']  ?>,
+            dataType : 'json',
+            success : function(data){
+                if(data == 'like') {
+                    $('#like_hearth').css('color','red');
+                }
+            },
 
+            error : function(){
+                console.log('error');
+            },
+        });
+
+    });
+</script>
 <?php
 $display->instagram();
 $display->footer();
