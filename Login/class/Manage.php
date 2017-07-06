@@ -119,4 +119,8 @@ class Manage
         return 'ok';
     }
 
+    public function DisplayLike($id) {
+        $query = $this->_bdd->query('SELECT * FROM yv_like WHERE id_article = '.$id);
+        return $query->fetch();
+    }
 }

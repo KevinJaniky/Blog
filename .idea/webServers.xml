@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="b2fc8ea8-1ea4-4215-83bf-e05d285a62da" name="bonbon" url="http://ftp.cluster023.hosting.ovh.net">
+      <webServer id="d8d2db7c-8383-490b-bb39-eae1a515c08f" name="serveur_perso" url="http://ftp.cluster023.hosting.ovh.net">
         <fileTransfer host="ftp.cluster023.hosting.ovh.net" port="21" rootFolder="/www">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />

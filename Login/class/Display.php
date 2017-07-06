@@ -89,6 +89,7 @@ class Display
               <ul>
                 <li><a href=\"/Login/Newsletter\">Newsletter</a></li>
                 <li><a href=\"/Login/Musique\">Musique Player</a></li>
+                <li><a href=\"/Login/Like\">Like</a></li>
               </ul>
             </div>
           </li>
