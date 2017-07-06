@@ -40,10 +40,16 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
                                 <?php
                                 if(isset($_FILES['music'])) {
                                     $data = new Manage();
-                                    var_dump($data->musicPlayerUpdate($_FILES['music']));
-                                } else {
-                                    echo 'ici';
+                                    $res = $data->musicPlayerUpdate($_FILES['music']);
+
+                                    if($res == 'ok') {
+                                        echo 'Upload Réussit';
+                                    }else {
+                                        echo 'Upload Echec';
+                                    }
+
                                 }
+
                                 ?>
                             </div>
                         </div>

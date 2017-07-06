@@ -97,7 +97,11 @@ $display->header();
                 </div>
                 <a href="/Article/<?= $liste[0]['id'] ?>/<?= $url ?>">Lire Plus <span class="glyphicon glyphicon-arrow-right"></span> </a>
             </section>
-
+            <script>
+                $('.article_promo').click(function () {
+                   window.location='/Article/<?= $liste[0]['id'] ?>/<?= $url ?>';
+                });
+            </script>
             <?php
             for ($i = 1; $i < $count; $i++) {
                 $url = str_replace(' ', '-', $liste[$i]['titre']);

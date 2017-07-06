@@ -741,3 +741,16 @@ footer .link_social_site ul li{
 .youtube_visuel img{
     width: 100%;
 }
+
+aside h3 {
+    text-align: center;
+    margin:30px 0;
+    border-bottom: 2px solid;
+    text-transform: uppercase;
+    font-size:1.3em;
+    padding:0 0 10px;
+}
+
+.article_promo {
+    cursor: pointer;
+}

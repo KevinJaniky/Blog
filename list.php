@@ -83,6 +83,12 @@ $display->header();
                 <a href="/Article/<?= $article[0]['id'] ?>/<?= $url_title_first ?>">Lire Plus <span
                             class="glyphicon glyphicon-arrow-right"></span> </a>
             </article>
+
+            <script>
+                $('.article_promo').click(function () {
+                    window.location='/Article/<?= $article[0]['id'] ?>/<?= $url_title_first ?>';
+                });
+            </script>
             <div class="categorie_flex">
                 <?php
 

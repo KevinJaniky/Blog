@@ -53,15 +53,23 @@ class Manage
         }
     }
 
+    public function addTitlePlayer($title) {
+        $query = $this->_bdd->prepare('INSERT INTO data (cle , valeur) VALUES( :cle, :valeur)');
+        $query->execute([
+            'cle'=>'player',
+            'valeur'=>$title
+            ]);
+    }
+
     public function musicPlayerUpdate($file)
     {
-        $extensions_valides = ['mp3', 'mp4'];
+        $extensions_valides = ['mp3'];
 
         $name = $file["name"];
         $poids = $file['size'];
         $code = $file['error'];
-        $maxsize = 104857600;
-        $upload = "/media/Music/";
+        $maxsize = 10485760;
+        $upload = $_SERVER['DOCUMENT_ROOT']."/media/Music/";
 
         //On récupère l'extension
         $name_exploded = explode(".", $name);
@@ -101,16 +109,14 @@ class Manage
         } //Notre extension est donc ok, on vérifie maintenant le poids de l'image
         else if ($poids > $maxsize) {
             return "Fichier trop lourd (" . $poids . "/" . $maxsize . "octets)";
-        } else {
-            $dest = $upload . 'music.mp3';
-            var_dump($dest);
-
-
-            $resultat = move_uploaded_file($name, $dest);
-            if (!$resultat) {
-                return 'nope';
-            }
-            return 'ok';
         }
+        $resultat = move_uploaded_file($file['tmp_name'], $upload . 'music.mp3');
+        if (!$resultat) {
+
+            return 'Error';
+        }
+        $this->addTitlePlayer($name);
+        return 'ok';
     }
+
 }

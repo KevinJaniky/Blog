@@ -1,6 +1,6 @@
 <?php
 
-class Display
+class Display extends Data
 {
 
     public function head($titre)
@@ -12,6 +12,7 @@ class Display
     <meta charset=\"utf-8\">
     <meta name=\"description\" content=\"\">
     <meta property=\"og:title\" content=\"Titre\"/>
+    <meta http-equiv=\"pragma\" content=\"no-cache\" />
     <meta property=\"og:description\" content=\"Description\"/>
     <meta property=\"og:image\" content=\"URL_image\"/>
     <meta property=\"og:url\" content=\"\">
@@ -366,6 +367,9 @@ class Display
     }
 
     public function audioPlayer(){
+        echo'<h3>Musique du moment</h3>';
+        $data = $this->titlePlayer();
+        echo '<p>'.$data['valeur'].'</p>';
         echo '<div class="audio green-audio-player">
     <div class="loading">
         <div class="spinner"></div>
