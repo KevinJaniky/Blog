@@ -326,6 +326,15 @@ aside .Youtube_remonter .item_video a:focus, aside .Youtube_remonter .item_video
     margin: 20px 0;
     border: 1px solid #d6d6d6;
     min-height: 260px;
+    position: relative;
+}
+.list_article .article_list #link_position{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0
+;
 }
 
 .list_article .tag_article {
@@ -452,7 +461,9 @@ footer .link_social_site ul li{
 .categorie_flex .article_int {
     flex: 1 0 auto;
     width: 50%;
+    max-width: 50%;
     margin: 25px 0;
+    position: relative;
 }
 .categorie_flex .article_int:nth-child(2n+2) {
     padding-left:20px;
@@ -467,10 +478,22 @@ footer .link_social_site ul li{
 .categorie_flex .article_int .article_element .couverture{
     margin-bottom: 10px;
 }
+.categorie_flex .article_int .article_element a {
+    font-size: 21px;
+    margin-bottom: 0;
+    color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 18px;
+}
+.categorie_flex .article_int .article_element a:hover{
+    text-decoration: none;
+}
 .categorie_flex .article_int .article_element h1{
     font-size: 21px;
     margin-bottom: 0;
-    font-weight: bold;
 }
 .categorie_flex .article_int .article_element .posted{
     color: #adadad;

@@ -100,9 +100,9 @@ $display->header();
                     <article class="article_int" role="article">
                         <div class="article_element">
                             <div class="couverture">
-                                <a href="/Article/<?= $article[$i]['id'] ?>/<?= $url_title ?>"><img
+                                <a href="/Article/<?= $article[$i]['id'] ?>/<?= $url_title ?>" id="link_position"></a><img
                                             src="/media/Articles/<?= $article[$i]['couverture'] ?>"
-                                            alt="<?= $article[$i]['keywords'] ?>"></a>
+                                            alt="<?= $article[$i]['keywords'] ?>">
                             </div>
                             <div class="tag_article"><?= $_CATEGORIE[$article[$i]['categorie']] ?></div>
                             <h1><?= $article[$i]['titre'] ?></h1>

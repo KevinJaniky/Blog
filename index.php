@@ -108,11 +108,9 @@ $display->header();
                 $url = str_replace(' ', '-', $liste[$i]['titre']);
                 ?>
                 <section class="article_list">
-                    <div class="couverture">
-                        <a href="/Article/<?= $liste[$i]['id'] ?>/<?= $url ?>"><img
-                                    src="/media/Articles/<?= $liste[$i]['couverture'] ?>"
-                                    alt="<?= $liste[$i]['keywords'] ?>"></a>
+                    <div class="couverture" style="background: url(/media/Articles/<?= $liste[$i]['couverture'] ?>);background-size: cover;background-position: center;">
                     </div>
+                        <a href="/Article/<?= $liste[$i]['id'] ?>/<?= $url ?>" id="link_position"></a>
                     <div class="content_art_list">
                         <div class="tag_article"><?= $_CATEGORIE[$liste[$i]['categorie']] ?></div>
                         <h1><a href="/Article/<?= $liste[$i]['id'] ?>/<?= $url ?>"><?= $liste[$i]['titre'] ?></a>
