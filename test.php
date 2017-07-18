@@ -1,5 +1,6 @@
-<?php
-require_once 'autoload.php';
 
-$data = new Like();
-echo $data->Like(5);
+
+<head>
+    <link rel="alternate" type="application/rss+xml" title="Mon flux RSS" href="http://www.yuna-creation.fr/flux.rss">
+</head>
+    <a href="flux.rss">Mon flux</a>

@@ -121,6 +121,8 @@ class Display
             <div class=\"collapsible-body\">
               <ul>
                 <li><a href=\"/Login/Youtube-Url\">Youtube Url</a></li>
+                <li><a href=\"/Login/Flux-rss\">Flux Rss</a></li>
+                <li><a href=\"/Login/Flux-rss-add\">Add Flux Rss</a></li>
               </ul>
             </div>
           </li>

@@ -12,3 +12,4 @@ RewriteRule ^Contact$ contact.php
 RewriteRule ^Categorie/([a-zA-Z]+)$ list.php?cat=$1
 RewriteRule ^Categorie/([a-zA-Z]+)/([0-9]+)$ list.php?cat=$1&page=$2
 RewriteRule ^Article/([a-zA-Z0-9]+)/(.+)$ article.php?article=$1 [L]
+RewriteRule ^(.+).rss$ $1.xml [L]
