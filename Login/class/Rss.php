@@ -45,7 +45,7 @@ class Rss {
         $data = $this->select();
 
 
-        $xml = '<?xml version="1.0" encoding="UTF-8" ?>
+        $xml = '<?xml version="1.0" encoding="iso-8859-1" ?>
 <rss version="2.0">
     <channel>
         <title>Yuna Création</title>
@@ -56,11 +56,18 @@ class Rss {
 
         for($i = 0;$i<count($data);$i++) {
             $art = $this->takePic($data[$i]['link']);
+/*
+            $str = strtr($data[$i]['link'], 'ÁÀÂÄÃÅÇÉÈÊËÍÏÎÌÑÓÒÔÖÕÚÙÛÜÝ', 'AAAAAACEEEEEIIIINOOOOOUUUUY');
+            $str = strtr($str, 'áàâäãåçéèêëíìîïñóòôöõúùûüýÿ', 'aaaaaaceeeeiiiinooooouuuuyy');*/
+
+            /*$strd = strtr($data[$i]['description'], 'ÁÀÂÄÃÅÇÉÈÊËÍÏÎÌÑÓÒÔÖÕÚÙÛÜÝ', 'AAAAAACEEEEEIIIINOOOOOUUUUY');
+            $strd = strtr($strd, 'áàâäãåçéèêëíìîïñóòôöõúùûüýÿ', 'aaaaaaceeeeiiiinooooouuuuyy');*/
+
 
             $xml .= '<item>';
             $xml .= '<title>'.stripcslashes($data[$i]['title']).'</title>';
-            $xml .= '<link>/Article'.$data[$i]['link'].'</link>';
-            $xml .= '<guid isPermaLink="true">/Article'.$data[$i]['link'].'</guid>';
+            $xml .= '<link>/Article'.rawurldecode($data[$i]['link']).'</link>';
+            $xml .= '<guid isPermaLink="true">/Article'.rawurldecode($data[$i]['link']).'</guid>';
             $xml .= '<pubDate>'.(date("D, d M Y H:i:s O", strtotime($data[$i]['pubDate']))).'</pubDate>';
             $xml .= '<enclosure url="http://www.yuna-creation.fr/media/Articles/'.$art['couverture'].'" length="122163200" type="image/jpeg" />';
             $xml .= '<description>'.stripcslashes($data[$i]['description']).'</description>';

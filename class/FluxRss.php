@@ -51,6 +51,28 @@ class FluxRss
         return str_replace(' ','-',$data['titre']);
     }
 
+    public function echape($str) {
+
+        $url = $str;
+        $url = preg_replace('#&Ccedil;#', 'C', $url);
+        $url = preg_replace('#&ccedil;#', 'c', $url);
+        $url = preg_replace('#&egrave;|&eacute;|&ecirc;|&euml;#', 'e', $url);
+        $url = preg_replace('#&Egrave;|&Eacute;|&Ecirc;|&Euml;#', 'E', $url);
+        $url = preg_replace('#&agrave;|&aacute;|&acirc;|&atilde;|&auml;|&aring;#', 'a', $url);
+        //$url = preg_replace('#@|&Agrave;|&Aacute;|&Acirc;|&Atilde;|&Auml;|&Aring;#', 'A', $url);
+        $url = preg_replace('#&Agrave;|&Aacute;|&Acirc;|&Atilde;|&Auml;|&Aring;#', 'A', $url);
+        $url = preg_replace('#&igrave;|&iacute;|&icirc;|&iuml;#', 'i', $url);
+        $url = preg_replace('#&Igrave;|&Iacute;|&Icirc;|&Iuml;#', 'I', $url);
+        $url = preg_replace('#&otilde;|&ograve;|&oacute;|&ocirc;|&otilde;|&ouml;#', 'o', $url);
+        $url = preg_replace('#&Ograve;|&Oacute;|&Ocirc;|&Otilde;|&Ouml;#', 'O', $url);
+        $url = preg_replace('#&ugrave;|&uacute;|&ucirc;|&uuml;#', 'u', $url);
+        $url = preg_replace('#&Ugrave;|&Uacute;|&Ucirc;|&Uuml;#', 'U', $url);
+        $url = preg_replace('#&yacute;|&yuml;#', 'y', $url);
+        $url = preg_replace('#&Yacute;#', 'Y', $url);
+            return ($url);
+
+    }
+
 
     public function updateFlux()
     {
@@ -69,10 +91,12 @@ class FluxRss
         for ($i = 0; $i < count($data); $i++) {
             $art = $this->takePic($data[$i]['link']);
 
+
+
             $xml .= '<item>';
             $xml .= '<title>' . stripcslashes($data[$i]['title']) . '</title>';
-            $xml .= '<link>/Article/' . $data[$i]['link'] .'/'.$this->takeTitle($data[$i]['link']).'</link>';
-            $xml .= '<guid isPermaLink="true">/Article/' . $data[$i]['link'] . '/'.$this->takeTitle($data[$i]['link']).'</guid>';
+            $xml .= '<link>/Article/' . $data[$i]['link'] .'/'.$this->echape($this->takeTitle($data[$i]['link'])).'</link>';
+            $xml .= '<guid isPermaLink="true">/Article/' . $data[$i]['link'] . '/'.$this->echape($this->takeTitle($data[$i]['link'])).'</guid>';
             $xml .= '<pubDate>' . (date("D, d M Y H:i:s O", strtotime($data[$i]['pubDate']))) . '</pubDate>';
             $xml .= '<enclosure url="http://www.yuna-creation.fr/media/Articles/' . $art['couverture'] . '" length="122163200" type="image/jpeg" />';
             $xml .= '<description>' . stripcslashes($data[$i]['description']) . '</description>';
