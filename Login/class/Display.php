@@ -123,6 +123,7 @@ class Display
                 <li><a href=\"/Login/Youtube-Url\">Youtube Url</a></li>
                 <li><a href=\"/Login/Flux-rss\">Flux Rss</a></li>
                 <li><a href=\"/Login/Flux-rss-add\">Add Flux Rss</a></li>
+                <li><a href=\"http://www.yuna-creation.fr/restart_flux.php\">Refresh Flux Rss</a></li>
               </ul>
             </div>
           </li>

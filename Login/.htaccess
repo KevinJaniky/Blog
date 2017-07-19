@@ -29,5 +29,6 @@ RewriteRule ^Musique$ music_player.php
 
 RewriteRule ^Youtube-Url$ url-youtube.php
 RewriteRule ^Flux-rss$ flux.php
+RewriteRule ^(.+).rss$ $1.xml
 RewriteRule ^Flux-rss-add$ add_flux.php [L]
 

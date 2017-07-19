@@ -33,7 +33,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
 
                                                 <?php
                                                     for($i=0;$i<$count;$i++) {
-                                                        echo ' <option value="/'.$data[$i]['id'].'/'.str_replace(' ','-',$data[$i]['titre']).'">'.$data[$i]['titre'].'</option>';
+                                                        echo ' <option value="'.$data[$i]['id'].'">'.$data[$i]['titre'].'</option>';
 
                                                     }
 
@@ -60,10 +60,9 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
 
                                         $data = new Rss();
                                         $data->add($titre,$link,$desc);
-                                        $data->updateFlux();
                                         ?>
                                         <script>
-                                           // window.location = '/Login/Flux-rss';
+                                            window.location = 'http://www.yuna-creation.fr/restart_flux.php';
                                         </script>
                                         <?php
                                     }

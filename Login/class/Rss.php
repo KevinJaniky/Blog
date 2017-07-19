@@ -35,9 +35,16 @@ class Rss {
 
     }
 
+    public function takePic($id){
+        $query = $this->_bdd->query('SELECT couverture FROM articles WHERE id ='.$id);
+        return $query->fetch();
+    }
     public function updateFlux() {
 
+
         $data = $this->select();
+
+
         $xml = '<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
@@ -48,12 +55,14 @@ class Rss {
         <copyright>Copyright 2017, Yuna Création</copyright>';
 
         for($i = 0;$i<count($data);$i++) {
+            $art = $this->takePic($data[$i]['link']);
 
             $xml .= '<item>';
-            $xml .= '<title>'.stripcslashes($data[$i]['titre']).'</title>';
-            $xml .= '<link>'.$data[$i]['link'].'</link>';
-            $xml .= '<guid isPermaLink="true">'.$data[$i]['link'].'</guid>';
+            $xml .= '<title>'.stripcslashes($data[$i]['title']).'</title>';
+            $xml .= '<link>/Article'.$data[$i]['link'].'</link>';
+            $xml .= '<guid isPermaLink="true">/Article'.$data[$i]['link'].'</guid>';
             $xml .= '<pubDate>'.(date("D, d M Y H:i:s O", strtotime($data[$i]['pubDate']))).'</pubDate>';
+            $xml .= '<enclosure url="http://www.yuna-creation.fr/media/Articles/'.$art['couverture'].'" length="122163200" type="image/jpeg" />';
             $xml .= '<description>'.stripcslashes($data[$i]['description']).'</description>';
             $xml .= '</item>';
 
@@ -62,9 +71,8 @@ class Rss {
         $xml .= '
     </channel>
 </rss>';
-        echo($xml);
 
-        $fp = fopen('/flux.xml',"a+");
+        $fp = fopen('flux.xml',"w+");
         fputs($fp,$xml);
         fclose($fp);
     }
